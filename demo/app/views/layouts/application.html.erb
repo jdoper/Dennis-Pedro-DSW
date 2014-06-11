@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<header>
+		<h1>Hello messages</h1>
+		<ul>
+			<li><a href="http://www.google.com">Home</a></li>
+			<li><a href="http://www.google.com">Questions</a></li>
+			<li><a href="http://www.google.com">News</a></li>
+			<li><a href="http://www.google.com">Contact</a></li>
+		</ul>
+	</header>
+	<div id="main">
+		<div id="text">
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>
