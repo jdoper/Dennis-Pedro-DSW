@@ -25,32 +25,9 @@ a {
   }
   &:hover {
     color: #fff;
-    background-color: #777;
+    background-color: #000;
   }
 }
-
-
-a {
-  color: #000;
-  border: 1px solid #808080;
-  width: 90px;
-  height: 20px;
-  display: block;
-  float: left;
-  text-align: center;
-  text-decoration: none;
-  list-style-type: none;
-  margin-right: 5px;
-  background-color: #9c9;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color:#D6D6D6;
-  }
-}
-
 
 div {
   &.field, &.actions {

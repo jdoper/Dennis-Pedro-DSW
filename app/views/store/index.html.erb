@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmatic Catalog</h1>
+<h1>Library</h1>
 
 <% cache ['store', Product.latest] do %>
 	<% @products.each do |product| %>
@@ -11,6 +11,7 @@
 				<%= image_tag(product.image_url) %>
 				<h3><%= product.title %></h3>
 					<%= sanitize(product.description) %>
+					<%= product.category.name %>
 				<div class="price_line">
 					<span class="price"><%= number_to_currency(product.price) %></span>
 				</div>
