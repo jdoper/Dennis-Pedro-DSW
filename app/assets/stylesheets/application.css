@@ -90,4 +90,5 @@ body{
 	padding: 1em;
 	background: white;
 	height: auto;
+	min-height: 185px;
 }
