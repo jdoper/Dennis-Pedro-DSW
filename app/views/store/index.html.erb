@@ -1,7 +1,8 @@
 <% if notice %>
-<p id="notice"><%= notice %></p>
+	<p id="notice"><%= notice %></p>
 <% end %>
 
+<p class="index_times"><%= pluralize session[:counter], 'time' %></p>
 <h1>Library</h1>
 
 <% cache ['store', Product.latest] do %>
@@ -10,8 +11,8 @@
 			<div class="entry">
 				<%= image_tag(product.image_url) %>
 				<h3><%= product.title %></h3>
-					<%= sanitize(product.description) %>
-					<%= product.category.name %>
+					<p><%= sanitize(product.description) %></p>
+					<p><b>Categoria:</b> <%= product.category.name %></p>
 				<div class="price_line">
 					<span class="price"><%= number_to_currency(product.price) %></span>
 					<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
