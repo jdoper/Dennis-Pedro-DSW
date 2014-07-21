@@ -21,3 +21,6 @@ Product.create!(title: 'Python 3.4 bla bla bla',
 	category_id: 3,
 	price: 55.50)
 # . . .
+
+Category.create(id: 2, name: "Aventura")
+Category.create(id: 3, name: "Suspense")
