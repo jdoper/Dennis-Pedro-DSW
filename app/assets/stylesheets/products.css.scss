@@ -1,12 +1,11 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 .products {
-	h1{
-		color: #227;
-		padding-bottom: 0.5em;
-		border-bottom: 3px dotted #77d;
-	}
 	table {
+		margin-top: 15px;
 		border-collapse: collapse;
-		margin: 15px 0px;
 	}
 	table tr td {
 		padding: 5px;
@@ -22,58 +21,23 @@
 			margin: 0;
 		}
 		dt {
-			color: #227;
+			color:#244;
 			font-weight: bold;
-			font-size: larger;
+			font-size:larger;
 		}
 		dd {
 			margin: 0;
 		}
 	}
 	.list_actions {
-		font-size: x-small;
-		text-align: right;
+		font-size:x-small;
+		text-align:right;
 		padding-left: 1em;
-		a {
-			background-color: #9c9;
-			color: #333;
-			text-decoration: none;
-			border: 1px solid #808080;
-			width: 60px;
-			height: 15px;
-			display: block;
-			text-align: center;
-			float: right;
-		}
-		a:hover {
-			background-color:#D6D6D6;
-			color: #6D6D6D;
-			display: block;
-		}
 	}
-	.list_line_even {
-		background: white;
-		border-bottom: 1px dotted #77d;
+	.list_line_even {	
+		background:#e0f8f8;
 	}
 	.list_line_odd {
-		background: #f0f0f0;
-		border-bottom: 1px dotted #77d;
+		background:#f8b0f8;
 	}
-}
-p a {
-	background-color: #9c9;
-	color: #333;
-	text-decoration: none;
-	border: 1px solid #808080;
-	width: 90px;
-	height: 20px;
-	display: block;
-	text-align: center;
-	float: left;
-	margin-top: -20px;
-}
-p a:hover {
-	background-color:#D6D6D6;
-	color: #6D6D6D;
-	display: block;
 }

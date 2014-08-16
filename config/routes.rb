@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   resources :carts
 
-  resources :categories
-
   get 'store/index'
 
   resources :products

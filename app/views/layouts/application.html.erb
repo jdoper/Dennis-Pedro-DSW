@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pragprog Books Online Store</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body class="<%= controller.controller_name %>">
-	<div id="corpo">
-		<div id="banner">
-			<%= image_tag("logos.png") %>
-			<%= @page_title || "Library" %>
-		</div>
-		<div id="columns">
-			<div id="side">
-				<ul>
-					<li><%= link_to 'Home', store_path %></li>
-					<li><%= link_to 'Products', products_path %></li>
-					<li><a href="http://www..../news">News</a></li>
-					<li><a href="http://www..../contact">Contact</a></li>
+	<title>O(n) Livros Online</title>
+	<%= stylesheet_link_tag "application", media: "all",
+	"data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 
-				</ul>
-			</div>
-			<div id="main">
-				<%= yield %>
+
+</head>
+
+<body class="<%= controller.controller_name %>">
+	<div class="body">
+	<div id="banner">
+		<%= @page_title || "Livraria O(n)" %>
+	</div>
+	<div class="menu">
+		<ul align="center">
+			<li><%= link_to 'Home', store_path %></li>	
+			<li><%= link_to 'Produtos', products_path %></li>
+			<li><%= link_to 'Noticias', store_path %></li>	
+			<li><%= link_to 'Carts', carts_path %></li>
+		</ul>	
+	</div>
+	<div id="columns">
+		<div id="side">
+			<div id="cart">
+				<% if @cart != nil %>
+					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+						<%= render @cart %>
+					<% end %>
+				<% end %>
 			</div>
 		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
 	</div>
 </body>
 </html>
