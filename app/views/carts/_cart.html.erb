@@ -9,8 +9,18 @@
 		<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
 	</tr>
 </table>
-<%= button_to "Checkout", new_order_path, method: :get %>
-<%= button_to 'Empty cart', cart, method: :delete,
-data: { confirm: 'Tem certeza?' } %>
+
+<table>
+	<tr>
+		<% if request.original_url == "http://localhost:3000/orders/new" %>
+			<td><%= button_to "Checkout", new_order_path, method: :get, :disabled => true %></td>
+		<% else %>
+			<td><%= button_to "Checkout", new_order_path, method: :get %></td>
+		<% end %>
+		<td><%= button_to 'Empty cart', cart, method: :delete,
+data: { confirm: 'Tem certeza?' } %></td>
+	</tr>
+</table>
 
 <% end %>
+
