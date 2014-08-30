@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .carts, #side #cart {
+  h1 {
+    margin-bottom: 10px;
+  }
 	.item_price, .total_line {
 		text-align: right;
 	}

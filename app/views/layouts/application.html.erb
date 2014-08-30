@@ -14,13 +14,12 @@
 	<div class="body">
 	<div id="banner">
 		<%= @page_title || "Livraria O(n)" %>
-		<p><%= request.original_url %></p>
 	</div>
 	<div class="menu">
 		<ul align="center">
 			<li><%= link_to 'Home', store_path %></li>	
 			<li><%= link_to 'Produtos', products_path %></li>
-			<li><%= link_to 'Noticias', store_path %></li>	
+			<li><%= link_to 'Orders', orders_path %></li>	
 			<li><%= link_to 'Carts', carts_path %></li>
 		</ul>	
 	</div>
