@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: Dave Thomas
+  name: Dennis
   address: MyText
-  email: dave@exemple.org
+  email: nunesdennis@me.com
   pay_type: Check
 
 two:
